@@ -76,3 +76,22 @@ function writefile(err, data) {
 }
 
 readfile("abc.txt");
+
+
+// function myFilter(my_array, callback) {
+//     //Enter your code here
+//     let arr = [];
+//     for (ele of my_array) {
+//         if (callback(ele))
+//             arr.push(ele);
+//     }
+//     return arr;
+// }
+// function callback(val) {
+//     return val % 2 == 0;
+// }
+
+// function processData(inputArray) {
+//     //In blank write anonymous function, which takes one parameter and returns true if its even or false if its odd.
+//     console.log(myFilter(inputArray, callback));
+// }
