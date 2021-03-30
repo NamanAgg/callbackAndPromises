@@ -110,3 +110,5 @@ module.exports = function (id) {
         }).catch(function (err) {
             reject("Error vault")
         });
+    }
+}
