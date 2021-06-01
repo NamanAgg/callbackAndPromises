@@ -271,6 +271,9 @@ promise1.then((data) => {
 //     console.log(data);
 // });
 
+
+
+
 let promise1 = fs.promises.readFile("1.txt", "utf-8").then(function (data) {
     console.log("first file reading completed");
 });
@@ -318,3 +321,43 @@ function delay(time) {
 Promise.race([delay(500), delay(100)]).then(function (data) {
     console.log(data);
 });
+
+
+
+let n = 8;
+let fileCompleted = 0;
+let sum = 0;
+function callback(err, data) {
+    fileCompleted += 1;
+    let lines = data.split("\r\n");
+    for (line of lines) {
+        sum += parseInt(line);
+    }
+    if (fileCompleted == n) {
+        console.log(sum);
+    }
+}
+function readfile(filename) {
+    fs.readFile(filename, "utf-8", callback);
+}
+
+for (let i = 1; i <= n; i++) {
+    readfile(i + ".txt");
+}
+
+
+
+
+
+
+
+// async function job(state){
+//     if(state) return "success";
+//     else throw "error";
+// }
+
+// async function first(){
+//     let data = await job(true);
+
+
+// }

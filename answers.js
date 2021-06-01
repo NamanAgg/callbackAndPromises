@@ -86,8 +86,6 @@ let central = require('./central'),
     mark = require('./mark');
 
 module.exports = function (id) {
-    // TODO
-    // Reminder: The deadline is tomorrow !
     return new Promise(function (resolve, reject) {
         let ans = {};
         ans["id"] = id;
